@@ -1,2 +1,2 @@
-# tamwood
-Projects and content learning in my Web Developer Certificate College at Tamwood  
+# Tamwood Projects & Learning
+Projects and content learning from Tamwood's Web Developer Certificate    
