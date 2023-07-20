@@ -5,7 +5,7 @@ I'll improve my web development skills while taking these classes here at Tamwoo
 
 Some of the technologies in this course
 + HTML% & CSS3
-+ JavaScript Frameworks
++ JavaScript
 + Sass
 + jQuery
 + PHP
@@ -15,6 +15,6 @@ Some of the technologies in this course
 
 Some of the projects that I will build during the classes 
 + Personal Website (Portfolio)
-+ Live Event Searching
++ Live Events Searching
 + ...
   
