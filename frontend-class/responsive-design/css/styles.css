@@ -1,0 +1,172 @@
+body {
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+overflow: hidden;
+background-color: #333;
+}
+
+.topnav a {
+float: left;
+display: block;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+/* Header */
+header {
+    background-color: black;
+    display: flex;
+    color: white;
+    height: 100vh;
+    justify-content: center;
+}
+
+.header-content {
+    border: 1px solid pink;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 800px;
+}
+
+.header-left {
+    align-items: center;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.header-right {
+    align-items: center;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+/* Gallery */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.gallery-header {
+    border: 1px solid green;
+    display: flex;
+    width: 800px;
+}
+
+.gallery-container {
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 800px;
+}
+
+.gallery-item {
+    aspect-ratio: 1/1;
+    border: 1px solid blue;
+    width: 30%;
+}
+
+@media screen and (max-width:900px) and (min-width:600px){
+    .gallery-header {
+        flex-flow: column wrap;
+        align-items: center;
+        width: 100%;
+    }
+
+    .gallery-container {
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+    }
+    
+    .gallery-item {
+        display: flex;
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .header-content {
+        flex-direction: column;
+        width: 80%;
+    }
+    
+    .header-left {
+        height: 50%;
+        width: 100%;
+    }
+    
+    .header-right {
+        height: 50%;
+        width: 100%;
+    }
+
+    .gallery-header {
+        flex-flow: column wrap;
+        width: 100%;
+    }
+
+    .gallery-container {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .gallery-item {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}

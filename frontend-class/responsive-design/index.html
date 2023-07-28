@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Responsive Design</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="topnav" id="myTopnav">
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div style="padding-left:16px">
+        <h2>Responsive Example</h2>
+        <p>Resize the browser window to see how it works.</p>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="header-left">
+                Header Left Content
+            </div>
+            <div class="header-right">
+                Header Left Content
+            </div>
+        </div>
+    </header>
+    
+    <!-- Gallery -->
+    <main>
+        <div class="gallery-header">
+            <h2>Portfolio</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, assumenda! Est nisi repellat magnam maiores accusantium aliquam omnis facilis minima, vel sint molestiae inventore beatae voluptas voluptatem, sapiente hic numquam.</p>
+        </div>
+
+        <div class="gallery-container">
+            <div class="gallery-item">Gallery Item 01</div>
+            <div class="gallery-item">Gallery Item 02</div>
+            <div class="gallery-item">Gallery Item 03</div>
+            <div class="gallery-item">Gallery Item 04</div>
+            <div class="gallery-item">Gallery Item 05</div>
+            <div class="gallery-item">Gallery Item 06</div>
+        </div>
+    </main>
+    
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+</html>
