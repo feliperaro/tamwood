@@ -1,0 +1,469 @@
+/*
+*  html5resetcss
+*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
+ins{background-color:#ff9;color:#000;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background-color: #303433;
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+}
+
+/* Navigation */
+nav {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
+}
+
+nav .nav-logo {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 30px;
+    width: 10%;
+}
+
+nav p {
+	font-size: 1.5em;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	padding-left: 5px;
+}
+
+.nav-links {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+.nav-links ul {
+	display: flex;
+	gap: 10%;
+    justify-content: center;
+}
+
+.nav-links ul li{
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+	list-style: none;
+}
+
+.nav-links ul a {
+	color: #fff;
+    display: flex;
+	text-decoration: none;
+}
+
+.nav-menu {
+    align-self: center;
+    display: flex;
+    justify-content: flex-end;
+    height: 98%;
+    width: 10%;
+}
+
+.nav-menu i {
+    visibility: hidden;
+}
+
+/* Content Header */
+.header-content {
+    align-items: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    padding-top: 30px;
+    height: 90%;
+}
+
+.header-top {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    height: 200px;
+    width: 650px;
+}
+
+.header-top h1 {
+    font-size: 50px;
+    letter-spacing: 0.05em;
+}
+
+.header-top p {
+    display: flex;
+    margin: 0 5px 10px 5px;
+}
+
+.header-bottom {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    gap: 50px;
+    justify-content: center;
+    width: 650px;
+}
+
+.header-bottom button {
+    background-color: #303433;
+    border: 1px solid white;
+    border-radius: 25px;
+    color: white;
+    height: 50px;
+    transition-duration: 0.4s;
+    width: 180px;
+}
+
+.header-bottom button:hover {
+    opacity: 1;
+    background-color: white;
+    color: #303433;
+}
+
+.media-icons {
+    display: flex;
+    gap: 30px;
+    height: 25px;
+}
+
+hr.section-divider {
+    margin: 20px auto;
+    width: 250px
+}
+
+/* Profile */
+.profile-container {
+    background-color: #F5F9F8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%
+}
+
+.profile-container h2 {
+    font-size: 30px;
+    margin-top: 80px;
+}   
+
+.profile {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    height: 400px;
+    width: 900px;
+}
+
+.profile-image {
+    border-radius: 50%;
+    height: 125px;
+    width: 125px;
+}
+
+.profile-information {
+    align-items: center;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 20px;
+}
+
+.profile-information h3 {
+    font-size: 20px;
+}
+
+.profile-information p {
+    font-size: 15px;
+    width: 80%;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    width: 80%;
+}
+
+.profile-actions button {
+    background-color: #6880F5;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    height: 40px;
+    padding: 12px 50px 12px 50px;
+    transition-duration: 0.4s;
+}
+
+/* Service */
+.service-container {
+    align-items: center;
+    background-color: #FEFEFE;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.service-container h2 {
+    font-size: 30px;
+    margin-top: 80px;
+}
+
+.service-content {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.service-item {
+    align-items: center;
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    height: 120px;
+    max-width: 350px;
+}
+
+.service-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.service-icon {
+    display: flex;
+    height: 100%;
+}
+
+.service-icon i {
+    color: #666;
+    margin: 20px 0 0 10px;
+}
+
+
+/* MEDIA SCREENS */
+
+@media screen and (max-width:992px) and (min-width:768px){
+
+    nav .nav-logo {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    
+    nav p {
+        font-size: 1.5em;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+    }
+    
+    .nav-links {
+        display: flex;
+        justify-content: flex-start;
+        width: auto;
+    }
+    
+    .nav-links ul {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 20%;
+    }
+    
+    .nav-links ul li{
+        display: flex;
+        font-weight: 600;
+        list-style: none;
+    }
+} 
+
+@media screen and (max-width:768px){
+    nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    nav .nav-logo {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 80%;
+    }
+
+    nav p {
+        font-size: 2em;
+        font-weight: 800;
+        letter-spacing: 0.05em;
+    }
+
+    .nav-menu {
+        align-items: center;
+        display: flex;
+        width: 20%;
+        justify-content: center;
+    }
+    
+    .nav-menu i {
+        display: flex;
+        visibility: visible;
+        justify-content: center;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+        width: 100%;
+        height: 100%;
+    }
+
+    .header-top {
+        align-items: center;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        width: 50%;
+        height: 50%;
+    }
+    
+    .header-top h1 {
+        font-size: 40px;
+        letter-spacing: 0.05em;
+        display: flex;
+        align-self: center;
+    }
+    
+    .header-top p {
+        display: flex;
+        margin: 0 5px 0px 5px;
+    }
+
+    .header-bottom {
+        align-items: center;
+        gap: 10px;
+        display: flex;
+        width: 50%;
+    }
+    
+    .profile-container {
+        display: flex;
+        flex-direction: column; 
+        width: 100%;
+    }
+
+    .profile {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        height: auto;
+        width: 100%;
+    }
+
+    .profile-information {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .profile-information p {
+        display: flex;
+        align-items: center;
+        flex-flow: row wrap;
+        width: 50%;
+    }
+
+    .profile-actions {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        flex-flow: column wrap;
+        width: auto;
+    }
+    
+    .profile-actions button {
+        background-color: #6880F5;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        height: 40px;
+        width: auto;
+        transition-duration: 0.4s;
+    }
+
+    .service-container {
+        display: flex;
+    }
+
+    .service-content {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        gap: 5px;
+    }
+
+    .service-item {
+        align-items: center;
+        border: 1px solid grey;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        max-height: 120px;
+        width: auto;
+    }
+
+    .service-info {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .service-info h3 {
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .service-icon {
+        display: flex;
+        height: 100%;
+    }
+    
+    .service-icon i {
+        color: #666;
+        margin: 20px 0 0 10px;
+    }
+    
+}
