@@ -9,41 +9,56 @@ body {
     font-size: 16px;
 }
 
+.quote-background {
+    align-self: flex-end;
+    display: flex;
+    height: 15vh;
+}
+
 .card-container{
     column-gap: 3vh;
     display: grid;
-    height: 80vh;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    justify-self: center;
+    margin: 8vh;
     row-gap: 3vh;
-    margin: 10vh;
     text-align: center;
 }
 
+.crd-01 {
+    background-image: url('../resources/images/quote.svg');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: 90% 10%;
+    color: white;
+}
+
 .card-post {
+    box-shadow: 5px 5px 5px #888888;
     color: white;
     display: flex;
     flex-direction: column;
     gap: 2vh;
     padding: 2vh;
-
 }
 
 .card-profile {
     display: flex;
     gap: 2vh;
     margin: 2vh 0 2vh 3vh;
+    width: 30vh; 
 }
 
 .profile-image {
+    border-radius: 50px;
     display: flex;
     justify-content: flex-start;
-    border-radius: 50px;
 }
 
 .profile-content {
-    display: flex;
     align-items: center;
+    display: flex;
     flex-direction: column;
 }
 
@@ -56,16 +71,19 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2vh;
+    margin: 1vh;
 }
 
 .post-title {
-
+    font-weight: 800;
+    text-align: justify;
 }
 
 .post-content {
-    
+    align-items: center;
+    display: flex;
+    text-align: justify;
 }
-
 
 .card-post:nth-of-type(1) {
     background-color: #733FC8;
@@ -91,15 +109,13 @@ body {
     grid-column: 2/4;
 }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 960px) {
     .card-container {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        /* grid-template-rows: 1fr 15% 1fr 1fr 1fr; */
+        justify-self: center;
         row-gap: 2vh;
-        width: 70%;
-    }
-
-    .card-post {
         height: auto;
     }
 
