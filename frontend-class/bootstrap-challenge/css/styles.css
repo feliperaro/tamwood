@@ -1,0 +1,27 @@
+
+header {
+    background-color: rgb(184, 184, 184);
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    justify-content: center;
+}
+
+header .navbar {
+    color: white;
+}
+
+nav .container-fluid {
+    display: flex;
+    justify-content: center;
+}

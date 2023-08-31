@@ -1,0 +1,26 @@
+.container, .container-fluid {
+    margin: 5vh;
+}
+
+.column-sample {
+    border: 1px solid gray;
+}
+.column-sample-content {
+    border: 1px solid gray;
+}
+
+.row {
+    background-color: aliceblue;
+    border: 1px solid gray;
+    margin-bottom: 10px;
+}
+
+.row-header, .row-nav-menu, .row-footer {
+    height: 10vh;
+}
+
+.row-content {
+    box-sizing: border-box !important;
+    height: 50vh;
+    
+}
