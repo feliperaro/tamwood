@@ -1,0 +1,218 @@
+/*
+*  html5resetcss
+*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
+ins{background-color:#ff9;color:#000;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
+header {
+	align-items: center;
+	background-color: black;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	margin-bottom: 60px;
+	width: 100%;
+}
+
+nav {
+	display: flex;
+	width: 1200px;
+	height: 80px;
+}
+
+nav .nav-logo {
+	display: flex;
+	align-items: center;
+	width: 30%;
+}
+
+nav p {
+	font-size: 1.7em;
+	font-weight: 700;
+	margin-left: 10px;
+	letter-spacing: 0.05em;
+}
+
+.nav-link {
+	display: flex;
+	justify-content: flex-end;
+	width: 70%;
+}
+
+.nav-link ul{
+	display: flex;
+	align-items: center;
+	gap: 50px;
+}
+
+.nav-link ul li{
+	list-style: none;
+	font-size: 1.2em;
+	font-weight: 700;
+}
+
+.nav-link ul a{
+	color: #fff;
+	text-decoration: none;
+}
+
+.header-content {
+	width: 1200px;
+	height: 100%;
+	display: flex;
+}
+
+.header-left {
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.header-left h1 {
+	font-size: 4em;
+	font-weight: 900;
+	margin-bottom: 35px;
+}
+
+.header-left p {
+	font-size: 1.2em;
+	line-height: 1.7em;
+	margin-bottom: 30px;
+}
+
+.header-left button {
+	width: 40%;
+	padding: 20px 0;
+	background-color: #000;
+	border: 2px solid #fff;
+	color: #fff;
+	font-size: 1.3em;
+	font-weight: 900;
+}
+
+.header-right {
+	width: 60%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header-right .header-img {
+	display: inline-block;
+	width: 60%;
+	height: 60%;
+	background-color: #2a2a2a;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+main h2 {
+	font-size: 4em;
+}
+
+main p {
+	width: 500px;
+	text-align: center;
+	margin: 30px 0 60px 0;
+	line-height: 1.6em;
+}
+
+.main-header {
+	width: 1200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.gallery {
+	width: 1200px;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.gallery-item-img {
+	width: 30%;
+	aspect-ratio: 1/1;
+	margin: 1%;
+	color: #fff;
+	background-image: url(../img/portfolio-img.jpg);
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+}
+
+.gallery-item-view {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 30%;
+	aspect-ratio: 1/1;
+	margin: 1%;
+	color: #2a2a2a;
+}
+
+.gallery-item-blank {
+	width: 30%;
+	aspect-ratio: 1/1;
+	margin: 1%;
+	color: #fff;
+}
+
+.gallery-item-img h3 {
+	display: flex;
+	width: 60%;
+	margin: 90px 0 20px 40px;
+	font-size: 2.5em;
+	font-weight: 700;
+}
+.gallery-item-img p {
+	display: flex;
+	width: 60%;
+	margin: 0 0 60px 40px;
+	font-size: 1em;
+	font-weight: 700;
+}
+
+.gallery-item-view i {
+	color: rgb(235, 0, 0);
+	margin-right: 10px;
+}
+
+footer {
+	height: 200px;
+	background-color: black;
+	margin-top: 80px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.header-content {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+}

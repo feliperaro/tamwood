@@ -1,0 +1,52 @@
+{
+    "messages": [
+        {
+            "message": "Hello World",
+            "username": "felipe"
+        },
+        {
+            "message": "test",
+            "username": "Anonymous"
+        },
+        {
+            "message": "Hello there!",
+            "username": "alice"
+        },
+        {
+            "message": "Hey, what's up?",
+            "username": "bob"
+        },
+        {
+            "message": "Hi, everyone!",
+            "username": "charlie"
+        },
+        {
+            "message": "Greetings from the AI!",
+            "username": "Anonymous"
+        },
+        {
+            "message": "Hello, folks!",
+            "username": "david"
+        },
+        {
+            "message": "Good morning!",
+            "username": "emily"
+        },
+        {
+            "message": "How's everyone doing?",
+            "username": "frank"
+        },
+        {
+            "message": "Hello World",
+            "username": "grace"
+        },
+        {
+            "message": "Just saying hi!",
+            "username": "Anonymous"
+        },
+        {
+            "message": "Hello from the other side!",
+            "username": "hannah"
+        }
+    ]
+}

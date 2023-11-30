@@ -1,0 +1,22 @@
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: center;
+  width: auto;
+}
+
+.contact-us-form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.companyNameWrapper {
+  display: none;
+}
+
+.errors {
+  color: red;
+}

@@ -1,0 +1,159 @@
+﻿//
+// WD Backend Midterm 
+// 09/14/2023
+//
+//
+
+
+// ####
+// Question 1
+// Node is ...
+// (a) runtime
+// (b) language
+// (c) framework
+// (d) package manager
+(a) runtime
+
+
+
+
+
+// ####
+// Question 2
+// MongoDB is ...
+// (a) noSQL database
+// (b) relational database
+// (c) document bin
+// (d) dot bin
+(a) noSQL database
+
+
+
+
+
+// ####
+// Question 3
+// ExpressJS is ...
+// (a) runtime
+// (b) language
+// (c) framework
+// (d) package manager
+(c) framework
+
+
+
+
+
+// ####
+// Question 4
+// REST is ...
+// (a) representational state transfer
+// (b) read erase set text
+// (c) reference to wait times after waking up
+// (d) simple object access protocol
+(a) representational state transfer
+
+
+
+
+
+// ####
+// Question 5
+// You can access the "123" value in "http://localhost:5000/api/users?userid=123" by ...
+// (a) req.body.userid
+// (b) req.params.userid
+// (c) req.query.userid
+// (d) req.userid
+// (e) none of the above
+(c) req.query.userid
+
+
+
+
+
+// ####
+// Question 6
+// You can access the "123" value in "http://localhost:5000/api/users/123" by ...
+// (a) req.body.userid
+// (b) req.params.userid
+// (c) req.query.userid
+// (d) req.userid
+// (e) none of the above
+(b) req.params.userid
+
+
+
+
+
+// ####
+// Question 7
+// You can access the "123" value in "<form method='post'><input type="text" name="userid" value="123" /></form> by ...
+// (a) req.body.userid
+// (b) req.params.userid
+// (c) req.query.userid
+// (d) req.userid
+// (e) none of the above
+(a) req.body.userid
+
+
+
+
+
+// ####
+// Question 8
+// You find an interesting html templating language called 'pug'
+// How do you set your ExpressJS application to start using it?
+const express = require('express');
+const app = express();
+
+app.set('view engine', 'pug');
+
+
+
+
+// ####
+// Question 9
+// What is the purpose of having "routes"
+define different endpoints and URLs in your application
+
+
+
+
+
+// ####
+// Question 10
+// What is a connection string?
+Connection string is a string that contains the information needed to establish a database connection.
+Connection strings are used by applications to connect to and interact with databases.
+
+
+
+
+
+// ####
+// Question 11
+// Why is it important to encrypt your users' passwords
+It is important to encrypt your users' passwords for security reasons. 
+
+
+
+// ####
+// Question 12
+// Take a look at the below code
+// Look for the LINE IN QUESTION and describe the purpose of this line.
+const mongoose  = require('mongoose')
+const userSchema = mongoose.Schema({
+    email: {
+        type: String,
+        required: [true, 'Please add an email'],
+        unique: true // <-- LINE IN QUESTION 
+    },
+    password: {
+        type: String,
+        required: [true, 'Please add a password']
+    },
+}, {
+    timestamps: true
+})
+
+unique: true ensures that the "email" field in the MongoDB collection must have unique values, preventing duplicates.

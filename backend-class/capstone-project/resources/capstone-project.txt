@@ -1,0 +1,17 @@
+// Backend Capstone Project
+
+// Create an expressjs website with the following features
+
+	// user authentication
+	// browsing products
+	// You may adjust products to your liking, but if you do not have any ideas, here are some ideas
+	//		Selling mousepads
+	// 		Selling clothes
+	// 		Selling candles
+	//		You must have at least 5 products and 2 categories
+	// shopping cart
+	//		Users can add multiple products to the shopping cart
+	//		Users can remove products
+	// Users may wish list items on the products
+
+

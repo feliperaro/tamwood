@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .square {
+        width: 100px;
+        height: 100px;
+        border: 2px solid black;
+        margin: 10px;
+        text-align: center;
+        line-height: 100px;
+        cursor: pointer;
+      }
+
+      .locked {
+        background-color: red;
+      }
+
+      button {
+        margin-top: 10px;
+      }
+    </style>
+    <title>Toggle Squares</title>
+  </head>
+  <body>
+    <div class="square locked" onclick="toggleLock(this)">LOCKED</div>
+    <div class="square" onclick="toggleLock(this)">UNLOCKED</div>
+    <div class="square" onclick="toggleLock(this)">UNLOCKED</div>
+
+    <button onclick="alert('Welcome')" disabled="disabled">CLICK</button>
+
+    <script>
+      function toggleLock(square) {
+        square.classList.toggle("locked");
+        updateButtonStatus();
+      }
+
+      function updateButtonStatus() {
+        var squares = document.querySelectorAll(".square");
+        var button = document.querySelector("button");
+
+        for (var i = 0; i < squares.length; i++) {
+          if (squares[i].classList.contains("locked")) {
+            button.disabled = true;
+            return;
+          }
+        }
+
+        button.disabled = false;
+      }
+    </script>
+  </body>
+</html>

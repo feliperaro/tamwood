@@ -1,0 +1,18 @@
+.squares {
+  align-items: center;
+  display: flex;
+  gap: 50px;
+  height: 150px;
+  justify-content: center;
+}
+
+.square {
+  height: 50%;
+  width: 100px;
+}
+
+.wrapper-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}

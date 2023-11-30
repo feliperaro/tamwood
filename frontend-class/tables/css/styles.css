@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    font-family: sans-serif;
+    justify-content: center;
+    margin-top: 15%;
+}
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(184, 184, 184);
+}
+
+tr:hover {
+    background-color: gray;
+}
+
+th, td {
+    text-align: left;
+}
+
+.company-cell {
+    padding-right: 250px;
+}
+
+.contract-cell {
+    padding-right: 150px;
+}
+
+.country-cell {
+    padding-right: 50px;
+}
+
+
+.span-cell {
+    padding-right: 250px;
+}

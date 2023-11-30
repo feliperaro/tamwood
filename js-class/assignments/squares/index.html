@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .square {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        display: inline-block;
+        cursor: pointer;
+        border: 2px solid #000;
+        text-align: center;
+        line-height: 100px;
+      }
+
+      #status {
+        margin-top: 20px;
+      }
+    </style>
+    <title>Locked/Unlocked Squares</title>
+  </head>
+  <body>
+    <div class="square" id="square1"></div>
+    <div class="square" id="square2"></div>
+    <div class="square" id="square3"></div>
+
+    <div id="status">Locked</div>
+    <button onclick="alert('Welcome')" disabled="disabled">CLICK</button>
+
+    <script>
+      const square1 = document.getElementById("square1");
+      const square2 = document.getElementById("square2");
+      const square3 = document.getElementById("square3");
+
+      const statusDiv = document.getElementById("status");
+
+      let square1Status = "locked";
+      let square2Status = "locked";
+      let square3Status = "locked";
+
+      function updateStatus() {
+        
+      }
+
+      function toggleStatus(square) {
+        if (square.textContent === "Locked") {
+          square.textContent = "Unlocked";
+          return "unlocked";
+        } else {
+          square.textContent = "Locked";
+          return "locked";
+        }
+      }
+
+      square1.addEventListener("click", function () {
+        square1Status = toggleStatus(square1);
+        updateStatus();
+      });
+
+      square2.addEventListener("click", function () {
+        square2Status = toggleStatus(square2);
+        updateStatus();
+      });
+
+      square3.addEventListener("click", function () {
+        square3Status = toggleStatus(square3);
+        updateStatus();
+      });
+
+      function updateButtonStatus() {
+        var squares = document.querySelectorAll(".square");
+        var button = document.querySelector("button");
+
+        for (var i = 0; i < squares.length; i++) {
+          if (squares[i].classList.contains("locked")) {
+            button.disabled = true;
+            return;
+          }
+        }
+
+        button.disabled = false;
+      }
+    </script>
+  </body>
+</html>
