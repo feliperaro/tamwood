@@ -8,6 +8,8 @@ createTodoButton.addEventListener("click", (e) => {
   e.preventDefault();
 
   const todoInput = document.querySelector("#todo-input");
+  if (todoInput.value.trim() === "") return alert("Please insert your TODO");
+
   const myTodo = {
     todo: todoInput.value,
     id: todos.length,
