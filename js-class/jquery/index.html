@@ -493,32 +493,6 @@
 
     <script src="jquery-3.7.1.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
-    <script>
-      console.log("jQuery", jQuery().jquery);
-      let table = new DataTable("#example", {
-        scrollY: 300,
-        paging: false,
-        columnDefs: [
-          {
-            render: (data, type, row) => {
-              data = data.replace(data, data.split(" ")[0]);
-              return data;
-            },
-            targets: 0,
-          },
-          {
-            render: (data, type, row) => {
-              data = data.replace(
-                "Javascript Developer",
-                "<b>Javascript Developer</b>"
-              );
-              return data;
-            },
-            targets: 1,
-          },
-          { visible: false, targets: [3] },
-        ],
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
