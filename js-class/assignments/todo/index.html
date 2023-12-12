@@ -10,6 +10,13 @@
     <form id="todo-form">
       <label for="todo-input">TODO</label>
       <input type="text" name="todo-input" id="todo-input" />
+
+      <label for="categories">Category: </label>
+      <select id="categories" name="categories">
+        <option value="personal">Personal</option>
+        <option value="work">Work</option>
+      </select>
+
       <input type="button" value="Create" id="create-todo" />
     </form>
     <div class="todos"></div>

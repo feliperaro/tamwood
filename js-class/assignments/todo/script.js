@@ -7,13 +7,15 @@ const createTodoButton = document.querySelector("#create-todo");
 createTodoButton.addEventListener("click", (e) => {
   e.preventDefault();
 
+  const categoryInput = document.querySelector("select[name='categories']");
   const todoInput = document.querySelector("#todo-input");
   if (todoInput.value.trim() === "") return alert("Please insert your TODO");
 
   const myTodo = {
-    todo: todoInput.value,
+    category: categoryInput.value,
     id: todos.length,
     isDone: false,
+    todo: todoInput.value,
   };
 
   createNewTodo(myTodo);
@@ -39,6 +41,10 @@ function createNewTodo(myTodo) {
     hideTodo(myTodo);
   });
   todoDiv.appendChild(todoElement);
+
+  let categoryElement = document.createElement("div");
+  categoryElement.textContent = "Category: " + myTodo.category;
+  todoDiv.appendChild(categoryElement);
 
   const todosElement = document.querySelector(".todos");
   todosElement.appendChild(todoDiv);
