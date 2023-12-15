@@ -1,0 +1,6 @@
+REACT
+Create three squares
+Create button that is disabled and says "closed"
+Click on any square to trigger locked or unlocked
+If all three squares are unlocked,
+   the button should say "open"
