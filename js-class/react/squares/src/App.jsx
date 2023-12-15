@@ -1,35 +1,72 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+/* eslint-disable react/prop-types */
+import { useState } from "react";
+import "./App.css";
+
+const Button = ({ children, onClick, isEnabled }) => {
+  return (
+    <button disabled={isEnabled} onClick={onClick}>
+      {children}
+    </button>
+  );
+};
+
+const Square = ({ children, onClick }) => {
+  return (
+    <div
+      onClick={onClick}
+      style={{
+        alignItems: "center",
+        border: "1px solid black",
+        display: "flex",
+        height: 80,
+        justifyContent: "center",
+        width: 80,
+      }}
+    >
+      {children}
+    </div>
+  );
+};
+
+const initialSquares = ["locked", "locked", "locked"];
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [isClosed, setIsClosed] = useState(true);
+  const [squares, setSquares] = useState(initialSquares);
+
+  function handleClickSquare(squareIndex) {
+    const newSquares = squares.map((square, index) => {
+      if (squareIndex === index) {
+        return square === "locked" ? "unlocked" : "locked";
+      }
+      return square;
+    });
+    setSquares(newSquares);
+
+    const isAllUnlocked =
+      newSquares.find((square) => square === "locked") === undefined;
+    setIsClosed(!isAllUnlocked);
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div style={{ display: "flex", flexDirection: "column", gap: 15 }}>
+      <div style={{ display: "flex", gap: 15 }}>
+        {squares.map((square, index) => (
+          <Square
+            key={index}
+            onClick={() => {
+              handleClickSquare(index);
+            }}
+          >
+            {square}
+          </Square>
+        ))}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      <Button isEnabled={isClosed} onClick={() => alert("Congrats!")}>
+        {isClosed ? "closed" : "open"}
+      </Button>
+    </div>
+  );
 }
 
-export default App
+export default App;
