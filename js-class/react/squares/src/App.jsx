@@ -28,7 +28,7 @@ const Square = ({ children, onClick }) => {
   );
 };
 
-const initialSquares = ["locked", "locked", "locked"];
+const initialSquares = ["🔒", "🔒", "🔒"];
 
 function App() {
   const [isClosed, setIsClosed] = useState(true);
@@ -37,19 +37,19 @@ function App() {
   function handleClickSquare(squareIndex) {
     const newSquares = squares.map((square, index) => {
       if (squareIndex === index) {
-        return square === "locked" ? "unlocked" : "locked";
+        return square === "🔒" ? "🔓" : "🔒";
       }
       return square;
     });
     setSquares(newSquares);
 
     const isAllUnlocked =
-      newSquares.find((square) => square === "locked") === undefined;
+      newSquares.find((square) => square === "🔒") === undefined;
     setIsClosed(!isAllUnlocked);
   }
 
   const lockSquares = () => {
-    setSquares(squares.map(() => "locked"));
+    setSquares(squares.map(() => "🔒"));
     setIsClosed(true);
   };
 
