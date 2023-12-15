@@ -48,6 +48,11 @@ function App() {
     setIsClosed(!isAllUnlocked);
   }
 
+  const lockSquares = () => {
+    setSquares(squares.map(() => "locked"));
+    setIsClosed(true);
+  };
+
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 15 }}>
       <div style={{ display: "flex", gap: 15 }}>
@@ -62,8 +67,8 @@ function App() {
           </Square>
         ))}
       </div>
-      <Button isEnabled={isClosed} onClick={() => alert("Congrats!")}>
-        {isClosed ? "closed" : "open"}
+      <Button isEnabled={isClosed} onClick={() => lockSquares()}>
+        {isClosed ? "Closed!" : "Open! Click to close."}
       </Button>
     </div>
   );
