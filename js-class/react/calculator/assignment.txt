@@ -1,0 +1,10 @@
+Given these five categories and their weights,
+  build a small calculator to give an overall mark.
+ 
+Have an input, a dropdown category, and an overall average with the weights.
+
+Participation   10%
+Coursework      20%
+Midterm Project 15%
+Final Project   30%
+Final Exam      25%
