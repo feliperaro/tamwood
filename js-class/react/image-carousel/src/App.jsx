@@ -1,35 +1,58 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+
+import image1 from "./assets/picture1.jpg";
+import image2 from "./assets/picture2.jpg";
+import image3 from "./assets/picture3.jpg";
+
+const images = [
+  {
+    source: image1,
+    name: "image1",
+  },
+  {
+    source: image2,
+    name: "image2",
+  },
+  {
+    source: image3,
+    name: "image3",
+  },
+];
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [image, setImage] = useState(images[0]);
+  const imgIndex = images.findIndex((img) => img.source === image.source);
+
+  const nextIndex = imgIndex === images.length - 1 ? 0 : imgIndex + 1;
+  const nextImage = images.find((_, i) => i === nextIndex);
+  const handleNextImage = () => setImage(nextImage);
+
+  const previousIndex = imgIndex === 0 ? images.length - 1 : imgIndex - 1;
+  const previousImage = images.find((_, i) => i === previousIndex);
+  const handlePreviousImage = () => setImage(previousImage);
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="img-container" style={{ height: 500, width: 500 }}>
+        <img
+          src={image.source}
+          alt={image.name}
+          height={"100%"}
+          width={"100%"}
+        />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+      <br />
+      <div className="actions">
+        <button type="button" onClick={handlePreviousImage}>
+          Previous
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <button type="button" onClick={handleNextImage}>
+          Next
+        </button>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
