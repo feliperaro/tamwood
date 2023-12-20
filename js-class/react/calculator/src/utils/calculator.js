@@ -21,4 +21,7 @@ export const CATEGORIES = [
   },
 ];
 
-export const INITIAL_GRADES = CATEGORIES.map((e) => ({ ...e, value: 0 }));
+export const INITIAL_GRADES = CATEGORIES.map((e) => {
+  const value = e.name === "Coursework" ? [] : null;
+  return { ...e, value };
+});

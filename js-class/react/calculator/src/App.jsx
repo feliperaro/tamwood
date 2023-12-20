@@ -9,16 +9,29 @@ function App() {
 
   const getFinalGrade = () => {
     let finalGrade = 0;
-    grades.forEach((grade) => (finalGrade += grade.value * grade.weight));
-    return finalGrade;
+    grades.forEach((grade) => {
+      if (grade.name !== "Coursework")
+        return (finalGrade += grade.value * grade.weight);
+
+      const gradeValues = grade.value;
+      const sumGrades = gradeValues.reduce(
+        (accumulator, currentValue) => accumulator + currentValue,
+        0
+      );
+
+      if (sumGrades === 0) return (finalGrade += sumGrades);
+
+      const avaregeGrade = sumGrades / gradeValues.length;
+      return (finalGrade += avaregeGrade * grade.weight);
+    });
+
+    return Math.round(finalGrade);
   };
 
   const getSelectedCategory = () => {
     const categorySelected = document.querySelector("#categories").value;
     return CATEGORIES[categorySelected].name;
   };
-
-  const finalGrade = getFinalGrade();
 
   return (
     <>
@@ -56,9 +69,9 @@ function App() {
               if (gradeValue[0] === "0") {
                 e.target.value = gradeValue.split("").slice(1).join("");
               }
-              const numberValue = Number(gradeValue);
-              if (numberValue < 0 || numberValue > 100) return;
-              setGrade(numberValue);
+              const gradeNumber = Number(gradeValue);
+              if (gradeNumber < 0 || gradeNumber > 100) return;
+              setGrade(gradeNumber);
             }}
           />
           <input
@@ -69,10 +82,13 @@ function App() {
               const selectedCategory = getSelectedCategory();
               setGrades(
                 grades.map((g) => {
-                  if (g.name === selectedCategory) {
+                  if (g.name !== selectedCategory) return g;
+                  if (selectedCategory !== "Coursework")
                     return { ...g, value: grade };
-                  }
-                  return g;
+
+                  const grades = g.value;
+                  grades.push(grade);
+                  return { ...g, value: grades };
                 })
               );
             }}
@@ -81,6 +97,7 @@ function App() {
       </div>
       <br />
       <div className="grades">
+        <h2>Grades</h2>
         <ul
           style={{
             alignItems: "flex-start",
@@ -89,15 +106,21 @@ function App() {
             listStyle: "none",
           }}
         >
-          Grades
-          {grades.map((grade, index) => (
-            <li key={index}>
-              {grade.name}: {grade.value}
-            </li>
-          ))}
+          {grades.map((grade, index) => {
+            const value =
+              grade.name === "Coursework"
+                ? grade.value.join(", ")
+                : grade.value;
+
+            return (
+              <li key={index}>
+                {grade.name}: {value}
+              </li>
+            );
+          })}
         </ul>
       </div>
-      <span>Final Grade: {finalGrade}</span>
+      <span>Final Grade: {getFinalGrade()}</span>
     </>
   );
 }
